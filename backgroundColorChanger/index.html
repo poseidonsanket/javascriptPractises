@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="display: flex;justify-content: center;align-items: center;">Background Color Changer</h1>
+    <p id="text-color" style="display: flex;justify-content: center;align-items: center;">Background Color</p>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <button id="btn">Change Color</button>
+    </div>
+    <script>
+        
+        var button = document.getElementById("btn");
+        var text = document.getElementById("text-color");
+        button.addEventListener("click", () => {
+            var colorChange = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + colorChange;
+            text.innerHTML = "Background Color : #" + colorChange ;
+        })
+    </script>
+</body>
+</html>
