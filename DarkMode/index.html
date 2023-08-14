@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Div>
+        <span>Dark mode :</span>
+        <input id="check" type="checkbox">
+        <div >
+            <span>contained Dark mode :</span>
+            <input id="check1" type="checkbox">
+        </div>
+        <div id="inner-div" style="border: 2px black solid;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolores blanditiis maxime inventore mollitia culpa nihil, similique nulla minus unde recusandae accusantium asperiores.
+        </div>
+    </Div>
+
+
+    <script>
+        
+        let check=document.getElementById("check");
+        let inner=document.getElementById("inner-div");
+        let check1=document.getElementById("check1");
+        check.addEventListener('change',()=>{
+
+            if(check.checked){
+                document.body.style.backgroundColor="black";
+                document.body.style.color="white";
+            }
+            else{
+                document.body.style.backgroundColor="white";
+                document.body.style.color="black";
+            }
+        })
+
+        check1.addEventListener("change",()=>{
+            if(check1.checked){
+                inner.style.backgroundColor="black";
+                inner.style.color="white";
+            }
+            else{
+                inner.style.backgroundColor="white";
+                inner.style.color="black";
+            }
+        })
+
+    </script>
+</body>
+</html>
